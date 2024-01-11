@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.118.2" />
+    <title>Features</title>
+    <link rel="icon" type="image/x-icon" href="./icon/icon.png" />
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/headers/"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    />
+
+    <link
+      href="/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <meta name="theme-color" content="#712cf9" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-black);
+        --bs-btn-bg: var(--bs-warning);
+        --bs-btn-border-color: var(--bs-warning);
+        --bs-btn-hover-color: var(--bs-black);
+        --bs-btn-hover-bg: #dfa908;
+        --bs-btn-hover-border-color: #dfa908;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #ce9c08;
+        --bs-btn-active-border-color: #ce9c08;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="./own_css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./own_css/hover.css" />
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        />
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        />
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        />
+      </symbol>
+    </svg>
+
+    <!-- Inicio Toggle modo dark -->
+    <div
+      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+    >
+      <button
+        class="btn btn-warning py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+      >
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="position-fixed bottom-0 ps-1"
+      style="z-index: 9999; cursor: default"
+    >
+      Bootstrap 5.3.2
+    </div>
+
+    <main>
+      <!---------------- header ---------------->
+
+      <div class="sticky-top bg-body shadow-lg">
+        <header
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4"
+        >
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a
+              href="./index.html"
+              class="d-inline-flex link-body-emphasis text-decoration-none animate__animated animate__fadeInDown animate__delay-0-5s hvr-shadow"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/1500/1500256.png"
+                width="45"
+              />
+            </a>
+          </div>
+
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center
+          mb-md-0"">
+          <li>
+            <a
+              href="./index.html"
+              class="nav-link px-2 link-warning animate__animated animate__fadeInDown animate__delay-0-5s"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link px-2 link-secondary animate__animated animate__fadeInDown animate__delay-1s"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="./about.html"
+              class="nav-link px-2 link-warning animate__animated animate__fadeInDown animate__delay-1-5s"
+              >About</a
+            >
+          </li>
+        </header>
+      </div>
+
+      <!---------------- Card ---------------->
+
+      <div class="album py-5 shadow">
+        <div class="container">
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 animate__animated animate__bounceInUp animate__delay-1-5s"
+          >
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Chiang_Mai_-_Wat_Phan_On_-_0017.jpg"
+                  class="card-img-top"
+                  width="100%"
+                  height="225"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    วัดพันอ้น ตั้งอยู่ไม่ไกลจาก ประตูท่าแพ วัดพันอ้น
+                    สร้างขึ้นเมื่อประมาณ พ.ศ.2044
+                    ในรัชสมัยของพระเจ้าศิริธรรมจักรพรรดิราช
+                    กษัตริย์ล้านนาองค์ที่ 13
+                    ในสมัยที่ล้านนาไทยยังเป็นอิสระนั่นเอง
+                    ที่นี่จึงเป็นวัดที่เก่าแก คู่บ้านคู่เมืองเชียงใหม่มาช้านาน
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        <a href="./feature_1.html">View</a>
+                      </button>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Map1"
+                      >
+                        Map
+                      </button>
+                    </div>
+                    <small class="text-body-secondary hvr-underline-from-left"
+                      >วัดพันอ้น</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/c2/%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%95%E0%B8%B2.JPG"
+                  class="card-img-top"
+                  width="100%"
+                  height="225"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    วัดพันเตา ซึ่งอยู่ไม่ไกลจากวัดพันอ้น วัดพันเตา
+                    เป็นอีกวัดเก่าแก่ใจกลางเมือง ตั้งอยู่ที่ถนนพระปกเกล้า
+                    ตำบลพระสิงห์ อำเภอเมือง เดิมเป็นเขตสังฆาวาส
+                    และพื้นที่หล่อพระอัฎฐารสของวัดเจดีย์หลวง
+                    ต่อมาได้สร้างเป็นวัดพันเตา ภายในวัดมีพระวิหารที่งดงาม
+                    สมบูรณ์มากที่สุดของจังหวัด
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        <a href="./feature_2.html">View</a>
+                      </button>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Map2"
+                      >
+                        Map
+                      </button>
+                    </div>
+                    <small class="text-body-secondary hvr-underline-from-center"
+                      >วัดพันเตา</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/30/Wat_Chedi_Luang_stupa_%28I%29.jpg"
+                  class="card-img-top"
+                  width="100%"
+                  height="225"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    วัดเจดีย์หลวงวรวิหาร หรือ วัดโชติการาม
+                    เป็นพระอารามหลวงเก่าแก่ของเชียงใหม่
+                    ตั้งอยู่ใจกลางเมืองที่ถนนพระปกเกล้า
+                    เดินเข้าไปปุ๊ปก็จะพบพระวิหารหลวงทรงล้านนาอยู่ตรงกลางวัดเลยทีเดียว
+                    สวยงามมากๆ
+                    และยังเป็นสถานที่ประดิษฐานเจดีย์ใหญ่ที่สุดในจังหวัดเชียงใหม่อีกด้วย
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        <a href="./feature_3.html">View</a>
+                      </button>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Map3"
+                      >
+                        Map
+                      </button>
+                    </div>
+                    <small class="text-body-secondary hvr-underline-from-right"
+                      >วัดเจดีย์หลวง</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="https://tourwatthai.com/wp-content/uploads/2019/12/wat-duang-dee9.jpg"
+                  class="card-img-top"
+                  width="100%"
+                  height="225"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    วัดดวงดี ตั้งอยู่ไม่ไกล วัดดวงดี เป็นวัดที่มีชื่อดี
+                    เป็นสิริมงคล ตั้งอยู่กลางเมืองเชียงใหม่ ใกล้ๆ
+                    กับอนุสาวรีย์สามกษัตริย์
+                    เป็นอีกหนึ่งวัดที่ที่มักจะอยู่ในกิจกรรมไหว้พระ 9 วัดเสมอๆ
+                    ตั้งอยู่ในเขตเมืองเก่า บนถนนพระปกเกล้า ตำบลศรีภูมิ
+                    อำเภอเมือง จังหวัดเชียงใหม่
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        <a href="./feature_4.html">View</a>
+                      </button>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Map4"
+                      >
+                        Map
+                      </button>
+                    </div>
+                    <small class="text-body-secondary hvr-underline-from-left"
+                      >วัดดวงดี</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="https://www.museumthailand.com/upload/evidence/1536667275_94007.jpg"
+                  class="card-img-top"
+                  width="100%"
+                  height="225"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    วัดอินทขิล ตั้งอยู่บริเวณสะดือเมืองของจังหวัดเชียงใหม่
+                    ชาวบ้านจึงเรียกว่า วัดสะดือเมือง ซึ่งมีการสันนิษฐานว่า
+                    กลุ่มโบราณสถานสะดือเมือง หรือวัดอินทขิลนี้
+                    จะเป็นเจดีย์ที่บรรจุอัฐิของพญามังราย
+                    ตามตำนานพื้นเมืองเชียงใหม่ และพงศาวดารโยนก
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        <a href="./feature_5.html">View</a>
+                      </button>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Map5"
+                      >
+                        Map
+                      </button>
+                    </div>
+                    <small class="text-body-secondary hvr-underline-from-center"
+                      >วัดอินทขิล</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="https://media-cdn.tripadvisor.com/media/photo-s/0f/51/73/c1/caption.jpg"
+                  class="card-img-top"
+                  width="100%"
+                  height="225"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    วัดเชียงมั่น จะค่อนข้างอยู่ไกลออกมาหน่อย ทางประตูช้างเผือก
+                    เพราะฉะนั้นงานนี้แนะนำให้นั่งรถแดงมาจะสะดวกกว่า วัดเชียงมั่น
+                    ตั้งอยู่ที่ ถนนราชภาคินัย อำเภอเมือง
+                    เป็นวัดที่เก่าแก่ที่สุดในตัวเมืองเชียงใหม่
+                    มีมาตั้งแต่สมัยแรกสร้างเมืองเลยทีเดียว
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        <a href="./feature_6.html">View</a>
+                      </button>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Map6"
+                      >
+                        Map
+                      </button>
+                    </div>
+                    <small class="text-body-secondary hvr-underline-from-right"
+                      >วัดเชียงมั่น</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="https://tourwatthai.com/wp-content/uploads/2018/02/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%97-Wat-Prasat-%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88.jpg"
+                  class="card-img-top"
+                  width="100%"
+                  height="225"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    วัดปราสาท ตั้งอยู่บนถนนอินทวโรรส ตำบลพระสิงห์ วัดปราสาทนี้
+                    เป็นวัดที่มีความเป็นมาทางประวัติศาสตร์อย่างยาวนาน
+                    และเป็นวัดที่มีคุณค่าทางสถาปัตยกรรม จากศิลาจารึก
+                    วัดปราสาทมีมาตั้งแต่ครั้งที่อาณาจักรล้านนาเจริญรุ่งเรืองเมื่อปี
+                    พ.ศ.2035 ในสมัยที่พระยายอดเชียงรายนั้นครองเมืองเชียงใหม่
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        <a href="./feature_7.html">View</a>
+                      </button>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Map7"
+                      >
+                        Map
+                      </button>
+                    </div>
+                    <small class="text-body-secondary hvr-underline-from-left"
+                      >วัดปราสาท</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="https://www.watphrasinghuk.org/wp-content/uploads/2020/03/oldtem.jpg"
+                  class="card-img-top"
+                  width="100%"
+                  height="225"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    วัดพระสิงห์ อยู่ใกล้ๆ กับวัดปราสาทเลย วัดพระสิงห์วรวิหาร
+                    เป็นวัดสำคัญวัดหนึ่งของเมืองเชียงใหม่ ภายในมีพระสิงห์ หรือ
+                    พระพุทธสิหิงค์ ซึ่งเป็นพระพุทธรูปโบราณศิลปะเชียงแสนโบราณ
+                    อีกทั้งเป็นพระพุทธรูปศักดิ์สิทธิ์คู่เมืองเชียงใหม่
+                    และแผ่นดินล้านนาอีกด้วย
+                    นอกจากนี้ภายในวัดยังมีสถาปัตยกรรมงดงาม
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        <a href="./feature_8.html">View</a>
+                      </button>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Map8"
+                      >
+                        Map
+                      </button>
+                    </div>
+                    <small class="text-body-secondary hvr-underline-from-center"
+                      >วัดพระสิงห์</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="https://ak-d.tripcdn.com/images/100o1d000001ecldqA569_C_551_310.jpg?proc=source%2Ftrip"
+                  class="card-img-top"
+                  width="100%"
+                  height="225"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    วัดหมื่นเงินกอง สร้างขึ้นในรัชสมัยราชวงค์มังราย พระเจ้ากือนา
+                    ภายในบริเวณวัดมีสถานที่น่าสนใจหลายแห่ง ทั้งพระวิหารโบราณ
+                    อาคารครึ่งปูนครึ่งไม้ศิลปะแบบล้านนา
+                    ภายในประดิษฐานพระประธานศิลปะล้านนา และพระอุโบสถ
+                    ฝีมือสล่าหรือช่างล้านนาแท้ๆ ตกแต่งด้วยการปิดทองประดับกระจก
+                    ข้างวิหารมีวิหารพระนอน (พระพุทธไสยาสน์)
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                      >
+                        <a href="./feature_9.html">View</a>
+                      </button>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Map9"
+                      >
+                        Map
+                      </button>
+                    </div>
+                    <small class="text-body-secondary hvr-underline-from-right"
+                      >วัดหมื่นเงินกอง</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------------ Modal ------------>
+
+      <div
+        class="modal fade"
+        id="Map1"
+        tabindex="-1"
+        aria-labelledby="Map1_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Map1_label">วัดพันอ้น</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.2355156555814!2d98.9911865!3d18.787654699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3aa209a0b451%3A0x761df22408c7002d!2sWat%20Phan%20On!5e0!3m2!1sen!2sth!4v1701100112015!5m2!1sen!2sth"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button button type="button" class="btn btn-warning">
+                <a
+                  href="https://maps.app.goo.gl/YdxFFFqBHzDieXiD6"
+                  class="text-white"
+                  target="_blank"
+                  >Open Link</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="Map2"
+        tabindex="-1"
+        aria-labelledby="Map2_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Map2_label">วัดพันเตา</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.2328019901024!2d98.9878621!3d18.7877757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a99281639cd%3A0x8663582207f7bcfa!2sWat%20Phantao!5e0!3m2!1sen!2sth!4v1701155036950!5m2!1sen!2sth"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button button type="button" class="btn btn-warning">
+                <a
+                  href="https://maps.app.goo.gl/6fdTYsecHZ1XZzQn9"
+                  class="text-white"
+                  target="_blank"
+                  >Open Link</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="Map3"
+        tabindex="-1"
+        aria-labelledby="Map3_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Map3_label">วัดเจดีย์หลวง</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.250886794789!2d98.9865804!3d18.7869693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9933111415%3A0x5cf7709a044ba8ba!2sWat%20Chedi%20Luang!5e0!3m2!1sen!2sth!4v1701156557084!5m2!1sen!2sth"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button button type="button" class="btn btn-warning">
+                <a
+                  href="https://maps.app.goo.gl/tR2bFVeAUD4PvhEQA"
+                  class="text-white"
+                  target="_blank"
+                  >Open Link</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="Map4"
+        tabindex="-1"
+        aria-labelledby="Map4_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Map4_label">วัดดวงดี</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.1954885029236!2d98.9885759!3d18.7894394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a98f9e4d601%3A0xbe59cd4e52164f13!2sWat%20Duang%20Dee!5e0!3m2!1sen!2sth!4v1701157812293!5m2!1sen!2sth"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button button type="button" class="btn btn-warning">
+                <a
+                  href="https://maps.app.goo.gl/WoEQSiWfuArNjcgi9"
+                  class="text-white"
+                  target="_blank"
+                  >Open Link</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="Map5"
+        tabindex="-1"
+        aria-labelledby="Map5_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Map5_label">วัดอินทขิล</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15108.93256255413!2d98.9841397!3d18.7877606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9908665b47%3A0x8a7ae2b1991f4b22!2sWat%20Inthakhin%20Sadue%20Muang!5e0!3m2!1sen!2sth!4v1701157788161!5m2!1sen!2sth"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button button type="button" class="btn btn-warning">
+                <a
+                  href="https://maps.app.goo.gl/qAsgAv4mS3XoZghg7"
+                  class="text-white"
+                  target="_blank"
+                  >Open Link</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="Map6"
+        tabindex="-1"
+        aria-labelledby="Map6_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Map6_label">วัดเชียงมั่น</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.0973911231818!2d98.9892703!3d18.793812600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a97936133d7%3A0x6e33b1cdc659f2dd!2sWat%20Chiang%20Man!5e0!3m2!1sen!2sth!4v1701157758327!5m2!1sen!2sth"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button button type="button" class="btn btn-warning">
+                <a
+                  href="https://maps.app.goo.gl/pFAyTDexQxVBJDrx9"
+                  class="text-white"
+                  target="_blank"
+                  >Open Link</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="Map7"
+        tabindex="-1"
+        aria-labelledby="Map7_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Map7_label">วัดปราสาท</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.189477497294!2d98.98119220000001!3d18.789707399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9b18e27f57%3A0xb560d548ac627f90!2sWat%20Prasat!5e0!3m2!1sen!2sth!4v1701157737069!5m2!1sen!2sth"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button button type="button" class="btn btn-warning">
+                <a
+                  href="https://maps.app.goo.gl/BxJsohS5zFtVH8gH9"
+                  class="text-white"
+                  target="_blank"
+                  >Open Link</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="Map8"
+        tabindex="-1"
+        aria-labelledby="Map8_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Map8_label">วัดพระสิงห์</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1888.6073795251823!2d98.98141705!3d18.7885802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9b6e4a246f%3A0x9656d9e717cd54e9!2sWat%20Phra%20Singh%20Woramahawihan!5e0!3m2!1sen!2sth!4v1701157705559!5m2!1sen!2sth"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button button type="button" class="btn btn-warning">
+                <a
+                  href="https://maps.app.goo.gl/Lag4WhBBFZsw1rLJ9"
+                  class="text-white"
+                  target="_blank"
+                  >Open Link</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="Map9"
+        tabindex="-1"
+        aria-labelledby="Map9_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Map9_label">วัดหมื่นเงินกอง</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3777.2857961559343!2d98.9787079!3d18.7854126!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9cc7340b17%3A0xecba0d824fbac24a!2sWat%20Muen%20Ngoen%20Kong!5e0!3m2!1sen!2sth!4v1701157678850!5m2!1sen!2sth"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button button type="button" class="btn btn-warning">
+                <a
+                  href="https://maps.app.goo.gl/mLoimMVoqFEctR2g9"
+                  class="text-white"
+                  target="_blank"
+                  >Open Link</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---------------- footer ---------------->
+
+      <div
+        class="container animate__animated animate__fadeInUp animate__delay-0-5s"
+      >
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+              <a
+                href="./index.html"
+                class="nav-link px-2 text-secondary hvr-underline-from-left"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link px-2 text-secondary hvr-underline-from-center"
+                >Features</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="./about.html"
+                class="nav-link px-2 text-secondary hvr-underline-from-right"
+                >About</a
+              >
+            </li>
+          </ul>
+          <p class="text-center text-secondary">&copy; 2023</p>
+        </footer>
+      </div>
+    </main>
+    <script
+      src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./own_js/script.js"></script>
+    <script src="./own_js/theme.js"></script>
+  </body>
+</html>
