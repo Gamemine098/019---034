@@ -339,3 +339,17 @@ section {
   text-decoration: none;
   background-color: var(--bs-warning);
 }
+
+/* mobile */
+
+@media only screen and (max-width: 430px) {
+  .svg1 {
+    padding-bottom: 110px;
+  }
+}
+
+@media only screen and (max-width: 393px) {
+  .svg1 {
+    padding-bottom: 135px;
+  }
+}
