@@ -342,7 +342,13 @@ section {
 
 /* mobile */
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 574px) {
+  .svg1 {
+    padding-bottom: 55px;
+  }
+}
+
+@media only screen and (max-width: 436px) {
   .svg1 {
     padding-bottom: 110px;
   }
